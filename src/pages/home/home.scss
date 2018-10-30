@@ -1,3 +1,41 @@
 page-home {
+    .splash-info {
+        position: relative;
+        z-index: 1;
+        margin-top: 34px;
+        text-align: center;
+      }
+      .splash-logo {
+        display: flex;
+        position: relative;
+        margin: auto;
+        background: url('../assets/imgs/ADM.png') no-repeat transparent;
+        background-size: 100%;
+        width: 328px;
+        height: 200px;
+        justify-content: center;
+      }
+      .splash-intro {
+        font-size: 18px;
+        font-weight: bold;
+        max-width: 80%;
+        margin: auto;
+      }
+      .autenticacion{
+        display: flex;
+        // width: 328px;
+        // height: 200px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        // background-color: rgb(3, 32, 61);
+        // position:absolute;
+      }
+      .autenticacion>div {
+        // background-color: #921da1;
+        // color: rgb(161, 38, 38);
+        width: 500px;
+        height: 200px;
+      }
 
 }

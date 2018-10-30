@@ -1,14 +1,48 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content>
+  <form [formGroup]="myForm" (submit)="doLogin()">
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <div class="splash-info">
+      <div class="splash-logo"></div>
+      <div class="splash-intro">
+        WELCOME
+      </div>
+    </div>
+    <div class="autenticacion">
+      <div>
+        <ion-list>
+          <ion-item text-center>
+            <ion-icon name="person" item-left></ion-icon>
+            <ion-label>Email</ion-label>
+            <ion-input formControlName="email" type="email" [(ngModel)]="account.email" name="email"></ion-input>
+          </ion-item>
+
+          <!--
+      Want to use a Username instead of an Email? Here you go:
+
+      <ion-item>
+        <ion-label floating>{{ 'USERNAME' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+      </ion-item>
+      -->
+
+          <ion-item text-center>
+            <ion-icon name="key" item-left></ion-icon>
+            <ion-label>Password</ion-label>
+            <ion-input formControlName="password" type="password" [(ngModel)]="account.password" name="password"></ion-input>
+          </ion-item>
+
+          <div padding>
+            <button ion-button color="primary" block [disabled]="!myForm.valid">login</button>
+          </div>
+
+        </ion-list>
+      </div>
+     
+    </div>
+  </form>
+  <div text-center>
+    <a ion-button block clear (click)="goToResetPassword()">
+      Forget password
+    </a>
+  </div>
 </ion-content>

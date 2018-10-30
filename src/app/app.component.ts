@@ -14,6 +14,7 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      localStorage.setItem('url', 'http://127.0.0.1:8000/')
       statusBar.styleDefault();
       splashScreen.hide();
     });
